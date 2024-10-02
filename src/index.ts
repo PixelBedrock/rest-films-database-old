@@ -12,6 +12,7 @@ app.use(function(req: Request, _: Response, next: Function) {
 });
 
 app.use(express.json());
+app.use(express.static("public"));
 app.use("/v1", router);
 
 app.listen(port, function() {
